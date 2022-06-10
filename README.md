@@ -51,6 +51,69 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
+## Supported links
+- Email
+- Phone
+- Github
+- Instagram
+- Linkedin
+- Medium
+- Reddit
+- Skype
+- Snapchat
+- Telegram
+- Twitter
+- Youtube
+
+
+### Usage samples
+Facebook Profile
+```dart
+// Call method
+FacebookDetector().build('http://fb.com/peter_parker-miller');
+```
+```dart
+// Get method result
+FacebookProfile(
+   profile: 'peter_parker-miller',
+),
+```
+Facebook Profile By id:
+```dart
+// Call method
+FacebookDetector().build('https://www.facebook.com/profile.php?id=100004123456789');
+```
+```dart
+// Get method result
+FacebookProfileById(
+   id: '100004123456789',
+)
+```
+Github User:
+```dart
+// Call method
+FacebookDetector().build('https://github.com/lorey');
+```
+```dart
+// Get method result
+GithubUser(
+   login: 'lorey',
+),
+```
+Github Repo:
+```dart
+// Call method
+FacebookDetector().build('https://github.com/lorey/socials');
+```
+```dart
+// Get method result
+GithubRepo(
+   login: 'lorey',
+   repo: 'socials',
+),
+```
+etc...
+
 ### Issues
 Please file any issues, bugs or feature request as an issue on our GitHub page.
 

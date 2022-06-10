@@ -1,6 +1,6 @@
 name: url_recognizer
-description: A new Flutter project.
-version: 0.0.1
+description: Social links url recognizer
+version: 0.0.1+1
 homepage: https://github.com/dpajak99/flutter_url_recognizer
 
 environment:
@@ -9,8 +9,6 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter
-  flutter_web_plugins:
     sdk: flutter
   equatable: ^2.0.3
 

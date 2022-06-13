@@ -1,10 +1,10 @@
 name: url_recognizer
 description: Social links url recognizer
-version: 0.0.1+1
+version: 0.0.2+1
 homepage: https://github.com/dpajak99/flutter_url_recognizer
 
 environment:
-  sdk: ">=2.16.1 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=2.5.0"
 
 dependencies:

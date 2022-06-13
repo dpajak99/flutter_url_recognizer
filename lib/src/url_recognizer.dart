@@ -12,34 +12,35 @@ import 'package:url_recognizer/src/socials/skype/skype_detector.dart';
 import 'package:url_recognizer/src/socials/snapchat/snapchat_detector.dart';
 import 'package:url_recognizer/src/socials/telegram/telegram_detector.dart';
 import 'package:url_recognizer/src/socials/twitter/twitter_detector.dart';
+import 'package:url_recognizer/src/socials/unknown_url.dart';
 import 'package:url_recognizer/src/socials/youtube/youtube_detector.dart';
 
 const List<SocialUrlDetector> kDefaultDetectors = <SocialUrlDetector>[
-  EmailDetector(),
   FacebookDetector(),
   GithubDetector(),
   InstagramDetector(),
   LinkedinDetector(),
   MediumDetector(),
-  PhoneDetector(),
   RedditDetector(),
   SkypeDetector(),
   SnapchatDetector(),
   TelegramDetector(),
   TwitterDetector(),
   YoutubeDetector(),
+  EmailDetector(),
+  PhoneDetector(),
 ];
 
 class UrlRecognizer {
-  static SocialUrl? findObject({
+  static SocialUrl findObject({
     required String url,
     List<SocialUrlDetector> recognizers = kDefaultDetectors,
   }) {
     for (SocialUrlDetector regExpDetector in recognizers) {
       if (regExpDetector.hasMatches(url)) {
-        return regExpDetector.build(url);
+        return regExpDetector.build(url)!;
       }
     }
-    return null;
+    return UnknownUrl(url: url);
   }
 }

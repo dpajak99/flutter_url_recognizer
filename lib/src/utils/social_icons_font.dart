@@ -34,4 +34,5 @@ class SocialIconsFont {
   static const IconData youtube = IconData(0xe80a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData linkedin = IconData(0xe80b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData reddit = IconData(0xe80c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData website = IconData(0xe80d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
